@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../images/logo.png" alt="logo" />
+        </div>
+        <div class="nav-buttons">
+          <button id="homeBtn">Home</button>
+          <button id="newGameBtn">New Game</button>
+          <button id="resetBtn">Reset</button>
+          <button id="backBtn">⬅ Back</button>
+        </div>
+      </nav>
+      <!-- Winner/Draw Message -->
+      <div class="msg-container hide">
+          <p id="msg">Winner</p> 
+      </div>
+      <div class="turn">
+        <div class="game-turn-wrapper">
+          <!-- Grid -->
+          <div class="game">
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+          </div>
+          <!-- Turn Info -->
+          <p id="turnInfo">It's Player O's turn</p>
+        </div>
+      </div>    
+    </main>
+    <!-- Audio Files -->
+    <audio id="click1" src="../music/click1.wav"></audio>
+    <audio id="click2" src="../music/click2.wav"></audio>
+    <audio id="click3" src="../music/click3.wav"></audio>
+    <audio id="gameover" src="../music/gameover.mp3"></audio>
+    <audio id="victory" src="../music/goodresult-82807.mp3"></audio>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

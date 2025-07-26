@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/bg.png") no-repeat center center/cover;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* ===== Heading ===== */
+h2 {
+  font-size: 3rem;
+}
+
+.game-turn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* ===== Game Grid ===== */
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  transform: translate(-30%);
+  align-items: center;
+  gap: 1.5vmin;
+  overflow: hidden;
+}
+
+/* ===== Grid Boxes ===== */
+.box {
+  background-color: #9b5de5;
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1.05rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+  font-size: 12vmin;
+  color: #f0f0f0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.box:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+.box:hover {
+  background-color: #7ac0f1;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #31314e;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.148);
+  flex-wrap: wrap;
+}
+
+/* ===== Navigation Buttons ===== */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  outline: none;
+}
+
+#btn:hover {
+  background-color: #00f5d4;
+  color: black;
+}
+
+.nav-buttons button:hover {
+  background-color: #93f197;
+}
+
+/* ===== Winner / Draw Message ===== */
+.msg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 90%;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+.hide,
+#newGameBtn {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  display: flex;
+}
+#msg {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ebeb98;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+#msg.show {
+  opacity: 1;
+  transform: scale(1);
+}
+/* ===== Logo ===== */
+.logo img {
+  height: 100px;
+  width: auto;
+  margin-top: 15px;
+}
+.turn {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  display: flex;
+}
+#turnInfo {
+  font-size: 4rem;
+  font-weight: 600;
+  transform: translate(0%,-50%);
+}
+
+/* ===== Winning Box Highlight ===== */
+.winning-box {
+  background-color: #00f5d4 !important;
+  color: black !important;
+  animation: glow 0.6s ease-in-out infinite alternate;
+}
+/* Glow animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #00f5d4, 0 0 20px #00f5d4;
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 20px #00f5d4, 0 0 40px #00f5d4;
+    transform: scale(1.05);
+  }
+}
+
+/* ===== Back Button Hover ===== */
+#backBtn:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 1349px) and (min-width: 700px)
+{
+  .msg-container {
+    order: 2;
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  #msg {
+    font-size: 3rem;
+  }
+  .game-turn-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game {
+    transform: none;
+  }
+  #turnInfo{
+    font-size: 3rem;
+  }
+
+  
+}
+@media (max-width: 700px) and (min-width: 200px){
+  .game-turn-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo img{
+  height: 80px;
+   width: auto;
+
+  }
+  .game {
+    transform: none;
+  }
+  .turn {
+    justify-content: center;
+    padding: 10px;
+  }
+  #turnInfo{
+    font-size: 2.5rem;
+  }
+  .msg-container {
+    margin-left: 20px;
+    text-align: center;
+  }
+  #msg {
+    font-size: 2.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-buttons {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-buttons button {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+}

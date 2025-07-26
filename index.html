@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe Landing</title>
+  <link rel="stylesheet" href="landing.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!--Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#howto">How to Play</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-textbox">
+      <h1>
+        <span class="main-title">Tic-Tac-Toe:</span>
+        <span class="subtitle">The War in Squares</span>
+      </h1>
+      <div class="hero-buttons">
+        <a href="modes_page/modes.html" class="btn-glow" id="playNowBtn">Play Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- How to Play -->
+  <section id="howto" class="section">
+    <h2>How to Play</h2>
+    <p>Select a mode, then take turns placing marks. Align symbols to win!<br><br><br>
+      <h3><b><i>2-player Rules:</i></b></h3><br>
+      1.Players take turns placing their symbol (X or O) in an empty square.<br>
+      2.The first to get three in a row (horizontally, vertically, or diagonally) wins.<br>
+      3.If all 9 cells are filled and no one wins, the game is a draw.<br><br>
+      <h3><b><i>3-player Rules:</i></b></h3><br>
+      1.Players take turns placing their symbol (X or O or △) in an empty square.<br>
+      2.The first to get three in a row (horizontally, vertically, or diagonally) wins.<br>
+      3.If all 9 cells are filled and no one wins, the game is a draw.<br><br>
+      <h3><b><i>4-player Rules:</i></b></h3><br>
+      1.Players take turns placing their symbol (X or O or △ or ☐) in an empty square.<br>
+      2.The first to get three in a row (horizontally, vertically, or diagonally) wins.<br>
+      3.If all 25 cells are filled and no one wins, the game is a draw.
+    </p>
+  </section>
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>This is a multi-player Tic Tac Toe game made for the web with animations, sounds, and fun logic!</p>
+  </section>
+
+  <!-- Audio File -->
+  <audio id="clickSound" src="music/click1.wav" preload="auto"></audio>
+
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
